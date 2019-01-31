@@ -48,6 +48,4 @@ def stations_by_river(stations):
     for i in keys:
         dictionary[riverlist[i]] = stationlist[i]
     return dictionary
-            
-            
-        
+                
