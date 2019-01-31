@@ -14,8 +14,8 @@ def stations_by_distance(stations, p):
     listforall = []
     for station in stations:
         listforall.append((station.name, haversine(station.coord, p)))
-    sorted_by_key(listforall, 1)
-    return listforall
+    sortedlist = sorted_by_key(listforall, 1)
+    return sortedlist
 
 def stations_within_radius(stations, centre, r):
     listofstations = []
