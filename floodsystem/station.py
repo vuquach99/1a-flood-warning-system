@@ -38,7 +38,6 @@ class MonitoringStation:
         d += "   river:         {}\n".format(self.river)
         d += "   typical range: {}".format(self.typical_range)
         return d
-<<<<<<< HEAD
 
     def typical_range_consistent(self, waterrange):
         """Checks the typical high/low range data"""
@@ -51,7 +50,6 @@ class MonitoringStation:
         else: 
             return False 
         
-=======
     
     def relative_water_level(self):
         if ((type(self.latest_level) == type(None)) or (type(self.typical_range) == type(None))):
@@ -59,4 +57,3 @@ class MonitoringStation:
         else:
             rwl = (self.latest_level - self.typical_range[0])/(self.typical_range[1] - self.typical_range[0])
             return rwl
->>>>>>> 24950f60668a8ea6b2a4b3ec2113e57f77beb383
