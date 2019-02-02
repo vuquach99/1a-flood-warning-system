@@ -62,16 +62,6 @@ def build_station_list(use_cache=True):
 
     return stations
 
-
-def inconsistent_typical_range_stations(stations):
-    """returns a list of stations that have inconsistent data"""
-    badstationlist = []
-    for station in stations:
-        if station.typical_range_consistent() == False:
-            badstationlist.append(station.name)
-    return badstationlist
-
-
 def update_water_levels(stations):
     """Attach level data contained in measure_data to stations"""
 
