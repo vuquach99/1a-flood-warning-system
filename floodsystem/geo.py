@@ -48,4 +48,32 @@ def stations_by_river(stations):
     for i in keys:
         dictionary[riverlist[i]] = stationlist[i]
     return dictionary
-                
+
+def rivers_by_station_number(stations, N):
+    """Task 1E: return a list of N rivers sorted by the number of stations on each river"""
+    riverlist = []
+
+    for river in rivers_with_station(stations):    
+        stationsmalllist = []
+        for station in stations:
+            if (str(station.river) == str(river)):
+                stationsmalllist.append(station.name)
+        rivertuples = (river, len(stationsmalllist))
+        riverlist.append(rivertuples)
+    riverlist.sort(key=lambda river: river[1], reverse = True)
+
+    final_list = []
+
+    c = 0
+    for r in riverlist:
+        if c < N:
+            final_list.append(r)
+            c += 1
+        elif c == N:
+            if r[1] == final_list[N-1]:
+                final_list.append(r)
+            else:
+                break
+        else:
+            break
+    return final_list
