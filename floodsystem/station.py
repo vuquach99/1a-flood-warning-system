@@ -52,7 +52,7 @@ class MonitoringStation:
             return rwl
 
 def inconsistent_typical_range_stations(stations):
-    """Task 1F: returns a list of stations that have inconsistent data"""
+    """Task 1F: Returns a list of stations that have inconsistent data"""
     badstationlist = []
     for station in stations:
         if station.typical_range_consistent() == False:
