@@ -15,8 +15,6 @@ def run():
 
     # Build list of 5 riskiest stations
     risky_stations = stations_highest_rel_level(stations,5)
-
-    print (risky_stations)
     name_list = []
     for i in range(len(risky_stations)):
         name_list.append(risky_stations[i][0])
