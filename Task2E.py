@@ -13,9 +13,15 @@ def run():
     # Build list of 5 riskiest stations
     risky_stations = stations_highest_rel_level(stations,5)
 
-    # Plot
-    plot = plot_water_levels(risky_stations, 10)
+    # Create Variables
 
+    dates = fetch_measure_levels[0]
+    levels = fetch_measure_levels[1]
+
+    # Plot
+    for i in range(len(risky_stations)):
+        plot = plot_water_levels(risky_stations[i], dates, levels)
+    
     return plot
 
 if __name__ == "__main__":
