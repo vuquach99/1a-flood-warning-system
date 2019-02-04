@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import matplotlib
 import datetime
 import numpy as np
@@ -13,4 +12,4 @@ def polyfit(dates, levels, p):
     # e.g. poly(0.3)
     poly = np.poly1d(p_coeff)
 
-    return poly
+    print (poly)

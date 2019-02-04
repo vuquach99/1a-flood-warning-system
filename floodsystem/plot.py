@@ -27,8 +27,8 @@ def plot_water_levels(station, dates, levels):
 
 def plot_water_level_with_fit(station, dates, levels, p):
     """Task 2F: Plots the water level data and the best-fit polynomial"""
-    # Find coefficients of best-fit polynomial f(x) of degree 4
-    p_coeff = np.polyfit(dates, levels, 4)
+    # Find coefficients of best-fit polynomial f(x) of degree p
+    p_coeff = np.polyfit(dates, levels, p)
 
     # Convert coefficient into a polynomial that can be evaluated,
     # e.g. poly(0.3)

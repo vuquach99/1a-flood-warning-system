@@ -28,7 +28,7 @@ def test_plot_2f():
             break
     assert station_cam
 
-    x = np.linspace(10000, 10002, 10)
+    x = np.linspace(0, 2, 10)
     level = [0.2, 0.7, 0.95, 0.92, 1.02, 0.91, 0.64, 0.89, 0.3, 0.45]
 
-    plot_water_level_with_fit(station, x, level, 4)
+    plot_water_level_with_fit(station, x, level, 5)
