@@ -7,4 +7,3 @@ def test_analysis():
     
     assert type(x) == np.ndarray
     assert type(y) == list
-    assert type(polyfit(x,y,4)) == type(None)
