@@ -21,10 +21,10 @@ def run():
     low_risk = w[3]
 
     # Print lists
-    print ("Severe risk: {} station(s): {}".format(len(severe_risk), severe_risk))
-    print ("High risk: {} station(s): {}".format(len(high_risk), high_risk))
-    print ("Moderate risk: {} station(s): {}".format(len(moderate_risk), moderate_risk))
-    print ("Low risk: {} station(s)".format(len(low_risk)))
+    print ("Severe risk: {} town(s): {}".format(len(severe_risk), severe_risk))
+    print ("High risk: {} town(s): {}".format(len(high_risk), high_risk))
+    print ("Moderate risk: {} town(s): {}".format(len(moderate_risk), moderate_risk))
+    print ("Low risk: {} town(s)".format(len(low_risk)))
         
 if __name__ == "__main__":
     print("*** Task 2G: CUED Part IA Flood Warning System ***")
