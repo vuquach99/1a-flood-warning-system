@@ -23,3 +23,38 @@ def polyfit(dates, levels, p):
 
     poly_tuples = (poly, d0)
     return poly_tuples
+
+def warnings(stations):
+    """Task 2G: Returns lists of risk-assessed towns"""
+    # Create list of unique towns
+    town_list0 = []
+    for station in stations:
+        town_list0.append(station.town)
+        town_list = list(set(town_list0))
+        town_list.sort()
+    
+    # Create town lists
+    severe_risk = []
+    high_risk = []
+    moderate_risk = []
+    low_risk = []
+
+    # Assess flood risks
+    for station in stations:
+        if (type(station.relative_water_level()) != type(None)):
+            if float(station.relative_water_level()) >= 2:
+                # Town is at severe risk
+                severe_risk.append(station.town)
+            elif 1.5 <= float(station.relative_water_level()) < 2:
+                # Town is at high risk
+                high_risk.append(station.town)
+            elif 1.0 <= float(station.relative_water_level()) < 1.5:
+                # Town is at moderate risk
+                moderate_risk.append(station.town)
+            elif float(station.relative_water_level()) < 1.0:
+                # Town is at low risk
+                low_risk.append(station.town)
+
+    # Append lists
+    warnings = [severe_risk, high_risk, moderate_risk, low_risk]
+    return warnings
